@@ -1,0 +1,91 @@
+/* public/css/style.css */
+body {
+  font-family: "Times New Roman", Times, serif; /* atau serif klasik */
+  margin: 20px auto;
+  width: 750px;
+  color: #000;
+}
+
+/* Header Logo & Info */
+.brand-logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.logo-box {
+  font-size: 40px;
+}
+
+.brand-title {
+  font-size: 26px;
+  color: #4a2306;
+  margin: 0;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.brand-tagline {
+  margin: 2px 0;
+  font-size: 14px;
+}
+
+.brand-address {
+  margin: 0;
+  font-size: 13px;
+  color: #444;
+}
+
+/* Navbar Marun */
+.nav-bar {
+  background-color: #660000; /* Warna marun sesuai gambar */
+  display: flex;
+  border: 1px solid #4d0000;
+}
+
+.nav-item {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-right: 1px solid #ffffff;
+  text-align: center;
+}
+
+.nav-item:last-child {
+  border-right: none;
+}
+
+.nav-item:hover {
+  background-color: #880000;
+}
+
+/* Konten */
+.content-container {
+  margin-top: 20px;
+}
+
+.info-group {
+  margin-bottom: 16px;
+}
+
+.label-title {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.data-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Tanggal Footer */
+.date-footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+}

@@ -1,0 +1,29 @@
+<!-- views/partials/navbar.ejs -->
+<div class="header-container">
+    <!-- Kop Header: Logo & Info Perusahaan -->
+    <div class="brand-header">
+        <div class="brand-logo-area">
+            <!-- Icon/Logo Kopi -->
+            <div class="logo-box">☕</div>
+            <div class="brand-info">
+                <h1 class="brand-title">Coffee Valley</h1>
+                <p class="brand-tagline"><em>Taste the love in every cup!</em></p>
+                <p class="brand-address">One Alewife Center 3rd Floor<br>Cambridge, MA 02140</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar Marun -->
+    <nav class="nav-bar">
+        <a href="/" class="nav-item active">Home</a>
+        <a href="/catalog" class="nav-item">Catalog</a>
+        <a href="/order-status" class="nav-item">Order Status</a>
+        <a href="/distributors" class="nav-item">Distributors</a>
+        <a href="/upload" class="nav-item">Upload</a>
+        <% if (user) { %>
+            <a href="/auth/logout" class="nav-item">Logout</a>
+        <% } else { %>
+            <a href="/auth/login" class="nav-item">Login</a>
+        <% } %>
+    </nav>
+</div>

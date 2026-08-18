@@ -1,0 +1,34 @@
+<!-- views/index.ejs -->
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<div class="content-container">
+    <% if (beanOfTheDay) { %>
+        <!-- 1. Bean of the Day -->
+        <div class="info-group">
+            <h3 class="label-title">Bean of the Day</h3>
+            <p class="data-text"><%= beanOfTheDay.bean_name %></p>
+        </div>
+
+        <!-- 2. Sale Price -->
+        <div class="info-group">
+            <h3 class="label-title">Sale Price</h3>
+            <p class="data-text">$<%= Number(beanOfTheDay.sale_price).toFixed(2) %></p>
+        </div>
+
+        <!-- 3. Description -->
+        <div class="info-group">
+            <h3 class="label-title">Description</h3>
+            <p class="data-text"><%= beanOfTheDay.description %></p>
+        </div>
+    <% } else { %>
+        <p>Data Bean of the Day tidak ditemukan.</p>
+    <% } %>
+
+    <!-- Tanggal Footer (Dinamis / Sesuai format hari ini) -->
+    <div class="date-footer">
+        <p><%= new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) %></p>
+    </div>
+</div>
+
+<%- include('partials/footer') %>

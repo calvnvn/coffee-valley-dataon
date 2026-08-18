@@ -3,6 +3,8 @@ const express = require("express");
 const path = require("path");
 const session = require("express-session");
 
+const indexRoutes = require("./routes/indexRoutes");
+
 const app = express();
 
 // Setup View Engine EJS
@@ -34,9 +36,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// Test
-app.get("/", (req, res) => {
-  res.send("✅ Coffee Valley Server Connected ✅");
-});
+// Routes
+app.use("/", indexRoutes);
 
 module.exports = app;
