@@ -6,6 +6,8 @@ const session = require("express-session");
 const indexRoutes = require("./routes/indexRoutes");
 const authRoutes = require("./routes/authRoutes");
 const catalogRoutes = require("./routes/catalogRoutes");
+const distributorRoutes = require("./routes/distributorRoutes");
+const uploadRoutes = require("./routes/uploadRoutes");
 
 const app = express();
 
@@ -42,5 +44,7 @@ app.use((req, res, next) => {
 app.use("/", indexRoutes);
 app.use("/", authRoutes);
 app.use("/", catalogRoutes);
+app.use("/", distributorRoutes);
+app.use("/", uploadRoutes);
 
 module.exports = app;

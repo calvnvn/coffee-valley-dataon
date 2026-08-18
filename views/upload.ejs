@@ -1,0 +1,50 @@
+<!-- views/upload.ejs -->
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<div class="content-container">
+    <!-- Form Upload Dokumen -->
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <table style="border: none;">
+            <tr>
+                <td style="padding: 5px 15px 5px 0;">Title</td>
+                <td><input type="text" name="title" style="width: 250px;" required></td>
+            </tr>
+            <tr>
+                <td style="padding: 5px 15px 5px 0;">Document File</td>
+                <td><input type="file" name="document_file" required></td>
+            </tr>
+            <tr>
+                <td style="padding: 5px 15px 5px 0;">Author</td>
+                <td><input type="text" name="author" style="width: 250px;" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-top: 10px;">
+                    <button type="submit" style="padding: 2px 15px; cursor: pointer;">Add Document</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <!-- Daftar Laporan / Dokumen -->
+    <div style="margin-top: 30px;">
+        <% if (uploads && uploads.length > 0) { %>
+            <h4 style="margin-bottom: 10px;">Available Reports in Library:</h4>
+            <ul>
+                <% uploads.forEach(doc => { %>
+                    <li style="margin-bottom: 6px;">
+                        <a href="/uploads/<%= doc.document_file %>" target="_blank" style="color: #660000; font-weight: bold;">
+                            <%= doc.title %>
+                        </a> 
+                        - <em>by <%= doc.author %></em>
+                    </li>
+                <% }) %>
+            </ul>
+        <% } else { %>
+            <p>There are currently no reports in the library.</p>
+        <% } %>
+    </div>
+</div>
+
+<%- include('partials/footer') %>

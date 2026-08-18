@@ -1,0 +1,32 @@
+<!-- views/distributors/index.ejs -->
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+
+<div class="content-container">
+    <table class="catalog-table" style="width: 50%;">
+        <thead>
+            <tr>
+                <th style="text-align: left;">Distributor Name</th>
+                <th style="text-align: left;">City</th>
+                <th></th> <!-- Kolom kosong untuk tombol Edit -->
+            </tr>
+        </thead>
+        <tbody>
+            <% distributors.forEach(dist => { %>
+                <tr>
+                    <td><%= dist.dist_name %></td>
+                    <td><%= dist.city %></td>
+                    <td style="text-align: right;">
+                        <a href="/distributors/edit/<%= dist.dist_id %>" style="color: #666; text-decoration: none;">[Edit]</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+    <div style="margin-top: 20px;">
+        <a href="/distributors/add" style="color: #666; text-decoration: none;">[Add]</a>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>

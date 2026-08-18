@@ -1,0 +1,76 @@
+<!-- views/distributors/edit.ejs -->
+<%- include('../partials/header') %> <%- include('../partials/navbar') %>
+
+<div class="content-container">
+  <h3 style="margin-bottom: 20px">Form Untuk Edit Distributor</h3>
+
+  <form action="/distributors/edit/<%= distributor.dist_id %>" method="POST">
+    <table style="border: none">
+      <tr>
+        <td style="padding: 5px 10px 5px 0">Distributor Name</td>
+        <td>
+          <input
+            type="text"
+            name="dist_name"
+            value="<%= distributor.dist_name %>"
+            required />
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 5px 10px 5px 0">City</td>
+        <td>
+          <input
+            type="text"
+            name="city"
+            value="<%= distributor.city %>"
+            required />
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 5px 10px 5px 0">State/Region</td>
+        <td>
+          <input
+            type="text"
+            name="state_region"
+            value="<%= distributor.state_region || '' %>" />
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 5px 10px 5px 0">Country</td>
+        <td>
+          <input
+            type="text"
+            name="country"
+            value="<%= distributor.country %>"
+            required />
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 5px 10px 5px 0">Phone</td>
+        <td>
+          <input
+            type="text"
+            name="phone"
+            value="<%= distributor.phone || '' %>" />
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 5px 10px 5px 0">Email</td>
+        <td>
+          <input
+            type="email"
+            name="email"
+            value="<%= distributor.email || '' %>" />
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td style="padding-top: 10px">
+          <button type="submit" style="padding: 2px 15px">Update</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<%- include('../partials/footer') %>

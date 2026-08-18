@@ -1,0 +1,41 @@
+<!-- views/distributors/add.ejs -->
+<%- include('../partials/header') %> <%- include('../partials/navbar') %>
+
+<div class="content-container">
+  <form action="/distributors/add" method="POST">
+    <table style="border: none">
+      <tr>
+        <td style="padding: 5px 10px 5px 0">Distributor Name</td>
+        <td><input type="text" name="dist_name" required /></td>
+      </tr>
+      <tr>
+        <td style="padding: 5px 10px 5px 0">City</td>
+        <td><input type="text" name="city" required /></td>
+      </tr>
+      <tr>
+        <td style="padding: 5px 10px 5px 0">State/Region</td>
+        <td><input type="text" name="state_region" /></td>
+      </tr>
+      <tr>
+        <td style="padding: 5px 10px 5px 0">Country</td>
+        <td><input type="text" name="country" required /></td>
+      </tr>
+      <tr>
+        <td style="padding: 5px 10px 5px 0">Phone</td>
+        <td><input type="text" name="phone" /></td>
+      </tr>
+      <tr>
+        <td style="padding: 5px 10px 5px 0">Email</td>
+        <td><input type="email" name="email" /></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td style="padding-top: 10px">
+          <button type="submit" style="padding: 2px 15px">Add</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<%- include('../partials/footer') %>
