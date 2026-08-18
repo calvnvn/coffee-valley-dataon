@@ -3,8 +3,9 @@
 const express = require("express");
 const router = express.Router();
 const homeController = require("../controllers/homeController");
+const isAuthenticated = require("../middlewares/auth");
 
 // GET HOME
-router.get("/", homeController.getHomePage);
+router.get("/", isAuthenticated, homeController.getHomePage);
 
 module.exports = router;

@@ -4,6 +4,7 @@ const path = require("path");
 const session = require("express-session");
 
 const indexRoutes = require("./routes/indexRoutes");
+const authRoutes = require("./routes/authRoutes");
 
 const app = express();
 
@@ -38,5 +39,6 @@ app.use((req, res, next) => {
 
 // Routes
 app.use("/", indexRoutes);
+app.use("/", authRoutes);
 
 module.exports = app;

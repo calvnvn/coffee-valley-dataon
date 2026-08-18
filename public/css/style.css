@@ -1,6 +1,6 @@
 /* public/css/style.css */
 body {
-  font-family: "Times New Roman", Times, serif; /* atau serif klasik */
+  font-family: "Times New Roman", Times, serif;
   margin: 20px auto;
   width: 750px;
   color: #000;
@@ -39,7 +39,7 @@ body {
 
 /* Navbar Marun */
 .nav-bar {
-  background-color: #660000; /* Warna marun sesuai gambar */
+  background-color: #660000;
   display: flex;
   border: 1px solid #4d0000;
 }

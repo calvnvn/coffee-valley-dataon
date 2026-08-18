@@ -1,0 +1,42 @@
+<!-- views/login.ejs -->
+<%- include('partials/header') %>
+
+<div class="login-wrapper">
+    <!-- Kop Header: Logo & Info Perusahaan -->
+    <div class="brand-header">
+        <div class="brand-logo-area">
+            <div class="logo-box">☕</div>
+            <div class="brand-info">
+                <h1 class="brand-title">Coffee Valley</h1>
+                <p class="brand-tagline"><em>Taste the love in every cup!</em></p>
+                <p class="brand-address">One Alewife Center 3rd Floor<br>Cambridge, MA 02140</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Login Sesuai Soal 1 -->
+    <form action="/login" method="POST" class="login-form">
+        <% if (error) { %>
+            <p style="color: red; margin-bottom: 10px; font-size: 13px;"><%= error %></p>
+        <% } %>
+
+        <table style="border: none;">
+            <tr>
+                <td style="padding: 4px 8px 4px 0;"><label for="user_id"><strong>User ID:</strong></label></td>
+                <td><input type="text" id="user_id" name="user_id" required></td>
+            </tr>
+            <tr>
+                <td style="padding: 4px 8px 4px 0;"><label for="password"><strong>Password:</strong></label></td>
+                <td><input type="password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-top: 6px;">
+                    <button type="submit" style="padding: 2px 12px; cursor: pointer;">Login</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<%- include('partials/footer') %>
