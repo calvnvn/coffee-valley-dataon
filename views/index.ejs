@@ -24,11 +24,6 @@
     <% } else { %>
         <p>Data Bean of the Day tidak ditemukan.</p>
     <% } %>
-
-    <!-- Tanggal Footer (Dinamis / Sesuai format hari ini) -->
-    <div class="date-footer">
-        <p><%= new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) %></p>
-    </div>
 </div>
 
 <%- include('partials/footer') %>
